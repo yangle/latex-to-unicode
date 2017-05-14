@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd "$(dirname $(echo "$0"))"
+cd "$(dirname "$(readlink -f "${BASH_SOURCE[0]}")")"
 text=$(./gui.py)
 if test -z "$text"; then
 	exit
