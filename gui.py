@@ -4,7 +4,7 @@ import sys
 
 sys.path += [ os.getcwd(), os.getcwd() + "/guis" ]
 
-for implementation in os.listdir("guis"):
+for implementation in sorted(os.listdir("guis")):
 	if implementation[-6:] != "gui.py":
 		continue
 	try:
